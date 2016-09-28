@@ -4,7 +4,9 @@ O ?= -O0
 PROGRAMS = fib \
 	add-global add-global-O0 add-global-O3 \
 	add-local add-local-O0 add-local-O3 \
-	add-arguments add-arguments-O0 add-arguments-O3
+	add-arguments add-arguments-O0 add-arguments-O3 \
+	pow5 pow5-O0 pow5-O1 pow5-O2 pow5-O3
+
 all: $(PROGRAMS)
 
 include ../common/rules.mk
