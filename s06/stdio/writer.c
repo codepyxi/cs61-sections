@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
 
     int fd;
     if (opt.filename)
-        fd = open(opt.filename, O_WRONLY | O_TRUNC | O_CREAT);
+        fd = open(opt.filename, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
     else
         fd = STDOUT_FILENO;
     if (fd < 0) {

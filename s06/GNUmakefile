@@ -11,14 +11,14 @@ CC = $(shell if test -f /opt/local/bin/gcc-mp-4.7; then echo gcc-mp-4.7; else ec
 
 all: $(PROGRAMS)
 
-O = 2
+OPT = 2
 include ../common/rules.mk
 
 %.o: %.c GNUmakefile $(BUILDSTAMP)
-	$(call run,$(CC) -O$(O) $(CFLAGS) $(DEPCFLAGS) -o $@ -c,COMPILE,$<)
+	$(call run,$(CC) -O$(OPT) $(CFLAGS) $(DEPCFLAGS) -o $@ -c,COMPILE,$<)
 
 $(PROGRAMS): %: %.o
-	$(call run,$(CC) -O$(O) $(CFLAGS) $(DEPCFLAGS) -o $@ $^,LINK $@)
+	$(call run,$(CC) -O$(OPT) $(CFLAGS) $(DEPCFLAGS) -o $@ $^,LINK $@)
 
 clean:
 	$(call run,rm -f $(ALLPROGRAMS) *.o *.dSYM *.core,CLEAN)
