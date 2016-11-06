@@ -1,4 +1,4 @@
-PROGRAMS = catafter runafter tripipe printfirst
+PROGRAMS = catafter runafter tripipe printfirst dup2_2
 all: $(PROGRAMS)
 
 include ../common/rules.mk
@@ -6,7 +6,7 @@ include ../common/rules.mk
 %.o: %.c $(BUILDSTAMP)
 	$(call run,$(CC) $(CFLAGS) $(DEPCFLAGS) -o $@ -c,COMPILE,$<)
 
-catafter runafter tripipe printfirst: %: %.o
+catafter runafter tripipe printfirst dup2_2: %: %.o
 	$(call run,$(CC) $(CFLAGS) -o $@ $^,LINK $@)
 
 clean:
