@@ -1,5 +1,5 @@
 PROGRAMS = bank bank_coarse bank_fine bank_deadlock bank_student \
-	client server cs61echo readclient bidiclient
+	client server cs61echo readclient bidiclient bidiclient_student
 all: $(PROGRAMS)
 
 include ../common/rules.mk

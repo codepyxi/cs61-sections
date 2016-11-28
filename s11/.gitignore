@@ -4,6 +4,7 @@ bank_deadlock
 bank_fine
 bank_student
 bidiclient
+bidiclient_student
 client
 cs61echo
 readclient
