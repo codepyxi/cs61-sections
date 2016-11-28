@@ -1,7 +1,8 @@
 bank
 bank_coarse
-bank_fine
 bank_deadlock
+bank_fine
+bank_student
 bidiclient
 client
 cs61echo

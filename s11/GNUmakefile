@@ -1,4 +1,4 @@
-PROGRAMS = bank bank_coarse bank_fine bank_deadlock \
+PROGRAMS = bank bank_coarse bank_fine bank_deadlock bank_student \
 	client server cs61echo readclient bidiclient
 all: $(PROGRAMS)
 
