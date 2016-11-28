@@ -1,4 +1,5 @@
-PROGRAMS = bank bank_coarse bank_fine bank_deadlock
+PROGRAMS = bank bank_coarse bank_fine bank_deadlock \
+	client server cs61echo readclient bidiclient bidiclient2 bidiclient3
 all: $(PROGRAMS)
 
 include ../common/rules.mk
