@@ -1,8 +1,7 @@
-PROGRAMS = bank bank_coarse bank_fine bank_deadlock \
-	client server cs61echo readclient bidiclient
+PROGRAMS = bidiclient-threads bidiclient-events
 all: $(PROGRAMS)
 
-include ../common/rules.mk
+include ../../common/rules.mk
 
 %.o: %.c $(BUILDSTAMP)
 	$(call run,$(CC) $(CPPFLAGS) $(CFLAGS) -pthread $(DEPCFLAGS) -o $@ -c,COMPILE,$<)
